@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <html>
+<body>
+
+
+         
+<h2 onmousemove="showCoords(event)">Click this heading</h2>
+
+		    <input id ="textfield" type="Text"
+			alt="Insert tet"
+			placeholder="Enter Text"
+			required="required" /> <br> </br>
+     
+         
+        <p id="demo"></p>
+
+
+ <script>
+	function showCoords(event) {
+   
+   var x = event.clientX;
+    var y = event.clientY;
+    var coords = "X coords: " + x + ", Y coords: " + y;
+    document.getElementById("demo").innerHTML = coords;
+}
+
+</script> 
+</body> 
+</html>
+
+
+
+
+
+

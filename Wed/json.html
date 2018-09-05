@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+var requestURL = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json";
+
+	var request = new XMLHttpRequest();
+		request.open('GET',requestURL);
+			request.responseType = 'json'
+				request.send();
+ 
+ 
+	request.onload = function () {
+		var superHeroes = request.response;
+			var pas = document.getElementId("box1").value.;
+		
+	loop1 :{
+		for (i=0; i<superHeroes.members.length;i++) {
+			for (j=0; j<superHeroes.members[i].powers.length ; j++) { 
+				if (pas == superHeroes.members[i].powers[j]){ 
+					console.log(superHeroes.members[i].name)
+					document.getElementId("outputName").innerHTML = "";
+					var nom = superHeroes.members[i].name;
+					var textnode = document.createTextNode("The hero with this power is " + nom);
+					document.getElementId("outputName".appendChild(textnode); 
+					break loop1;
+					
+					} 
+				}	
+		        }
+                 document.getElementId("outputName").innerHTML = "";
+				 
+				 var textnode = document.createTextNode("There is no hero with that power");
+				 document.getElementId("outputName")appendChild(textnode);
+				 }
+				 
+			}	 
+
+				 
+
+
+	}
+}
+ 
+
+</script>
+
+<form id="form1" action="/action_page.php">
+
+
+
+
+
+
+<body>
+
+
+
+
+
+</body>
+
+
+</html> 

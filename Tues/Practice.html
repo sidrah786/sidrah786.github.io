@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+	
+	function Sub () {
+ 
+
+	var b1 =window.document.getElementById("x");
+	var b2 =window.document.getElementById("y");
+	var b3 = parseInt(b1.value) - parseInt(b2.value); 
+ 
+ 
+ 
+ 
+ 
+ 
+	if (b1.value == "") {
+		document.getElementById("x").focus();
+		alert("Empy field");
+		return("Empty field");
+	    
+	}
+    if (b2.value == "") {
+		document.getElementById("y").focus();
+		alert("Empy field");
+		return("Empty field");
+	}    
+	else  {
+   
+		return(b1.value + " - " + b2.value + " is " +  b3);
+   }
+   
+   
+ 
+  
+  }
+  
+
+	function Add () {
+
+	var b1 =window.document.getElementById("x");
+	var b2 =window.document.getElementById("y");
+	var b3 = parseInt(b1.value) + parseInt(b2.value); 
+
+	
+if (b1.value == "") {
+		document.getElementById("x").focus();
+		alert("Empy field");
+		return("Empty field");
+	    
+	}
+    if (b2.value == "") {
+		document.getElementById("y").focus();
+		alert("Empy field");
+		return("Empty field");
+	}    
+	else  {
+   
+		return(b1.value + " + " + b2.value + " is " +  b3);
+   }
+  
+  }
+
+
+	function Divide() {
+
+	var b1 =window.document.getElementById("x");
+	var b2 =window.document.getElementById("y");
+	var b3 = parseInt(b1.value) / parseInt(b2.value); 
+ 
+if (b1.value == "") {
+		document.getElementById("x").focus();
+		alert("Empy field");
+		return("Empty field");
+	    
+	}
+    if (b2.value == "") {
+		document.getElementById("y").focus();
+		alert("Empy field");
+		return("Empty field");
+	}    
+	else  {
+   
+		return(b1.value + " / " + b2.value + " is " +  b3);
+   }
+  
+}
+
+	function Multiply () {
+
+	var b1 =window.document.getElementById("x");
+	var b2 =window.document.getElementById("y");
+	var b3 = parseInt(b1.value) * parseInt(b2.value); 
+ 
+ 
+if (b1.value == "") {
+		document.getElementById("x").focus();
+		alert("Empy field");
+		return("Empty field");
+	    
+	}
+    if (b2.value == "") {
+		document.getElementById("y").focus();
+		alert("Empty field");
+		return("Empty field");
+	}    
+	else  {
+   
+		return(b1.value + " x " + b2.value + " is " +  b3);
+   }
+ }
+
+</script>
+
+  
+	
+	<input id ="x" type="Number"
+	    alt="Enter number 1"
+		placeholder="Enter first number"
+		required="required" /> <br> </br>
+		
+	<input id ="y" type="Number"
+		alt="Enter number 2"
+		placeholder=" Enter second number"
+		required="required" /> <br> </br>
+	
+<input type="button" onclick="document.getElementById('Sub').innerHTML= Sub()" value="substract" />
+<input type="button" onclick="document.getElementById('Add').innerHTML= Add()" value="add" />
+<input type="button" onclick="document.getElementById('Divide').innerHTML= Divide()" value="Divide" />
+<input type="button" onclick="document.getElementById('Multiply').innerHTML= Multiply()" value="Multiply" />
+
+<li id="Sub"></li>
+<li id="Add"></li>
+<li id="Divide"></li>
+<li id="Multiply"></li>
+
+
+
+
+</head>
+</html> 
